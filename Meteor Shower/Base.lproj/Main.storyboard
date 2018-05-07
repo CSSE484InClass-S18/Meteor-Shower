@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,64 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meteor_Shower" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tz9-l5-8QF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttk-Yj-crN">
+                                <rect key="frame" x="0.0" y="567" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Nt6-Kc-mYG"/>
+                                    <constraint firstAttribute="width" constant="200" id="cYg-mN-QEf"/>
+                                </constraints>
+                                <state key="normal" title="Add Earth"/>
+                                <connections>
+                                    <action selector="pressedAddEarth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CV9-vW-px0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bga-Nj-u7i">
+                                <rect key="frame" x="175" y="567" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Fij-KS-XG8"/>
+                                    <constraint firstAttribute="width" constant="200" id="Xql-yG-vl5"/>
+                                </constraints>
+                                <state key="normal" title="Fire Meteor!"/>
+                                <connections>
+                                    <action selector="pressedFireMeteor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Qa-xD-6Y3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add" translatesAutoresizingMaskIntoConstraints="NO" id="9Y3-Tb-2N8">
+                                <rect key="frame" x="175" y="331.5" width="24" height="24"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Y3-Tb-2N8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Ol-yE-TDL"/>
+                            <constraint firstItem="Bga-Nj-u7i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5bW-kA-xp5"/>
+                            <constraint firstItem="9Y3-Tb-2N8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="EXv-05-wdX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ttk-Yj-crN" secondAttribute="bottom" id="Qlo-hj-Q15"/>
+                            <constraint firstItem="tz9-l5-8QF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cpQ-XM-cPT"/>
+                            <constraint firstItem="Bga-Nj-u7i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qD6-fk-EwH"/>
+                            <constraint firstItem="tz9-l5-8QF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s1e-7U-P68"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tz9-l5-8QF" secondAttribute="trailing" id="szy-V5-KYq"/>
+                            <constraint firstItem="ttk-Yj-crN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vd6-u8-tUh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tz9-l5-8QF" secondAttribute="bottom" id="zc7-RS-7aP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="tz9-l5-8QF" id="Ges-pN-nk3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_add" width="24" height="24"/>
+    </resources>
 </document>
